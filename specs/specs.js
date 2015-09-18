@@ -24,6 +24,6 @@ describe('calculatePrice', function() {
 describe('calculateBitCoinPrice', function() {
     it("calculates the price of the pizza in BitCoins", function() {
         var testPizza = new PizzaOrder(4, 7, 12);
-        expect(testPizza.calculateBitCoinPrice()).to.equal(24740.4);
+        expect(testPizza.calculateBitCoinPrice()).to.equal(0.4541559554413025);
     });
 });

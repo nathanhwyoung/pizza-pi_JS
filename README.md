@@ -6,7 +6,7 @@
 
 ## Description
 
-_A webpage where a user can select the name of a movie, the time of day that they would like to see the movie and their age._
+_An application that uses PI to calculate the cost of a pizza order._
 
 ## Setup
 
@@ -22,7 +22,7 @@ And has a dependency for jQuery._
 
 ### Legal
 
-Copyright (c) 2015 Brian Borealis & Nathan Young
+Copyright (c) 2015 Nathan Young
 
 This software is licensed under the MIT license.
 

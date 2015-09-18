@@ -49,6 +49,6 @@ $(document).ready(function() {
         $("#show-pizza").append(
             "<p>" + newPizza.listPizza() + "</p>" +
             "<p> $ " + newPizza.calculatePrice() + "</p>" +
-            "<p> BTC " + newPizza.calculateBitCoinPrice() + "<i> (Bit-Coin)</i></p>").show();
+            "<p> BTC " + newPizza.calculateBitCoinPrice() + "<i> (Bit-Coin)</i></p>").show("slow");
     });
 });

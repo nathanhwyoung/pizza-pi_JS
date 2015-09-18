@@ -11,38 +11,75 @@
 
 <body>
 
-    <div class="container">
+    <div class="row">
 
-        <div id="title">
-
-            <h2>U WANT PIZZA? FILL THIS IN.</h2>
+        <div class="col-md-4">
 
         </div>
 
-        <form id="new-order">
+    </div>
 
-            <div class="form-group">
-                <label for="new-number">HOW MANY PIZZAS U WANT:</label>
-                <input type="number" min="1" class="form-control" id="new-number">
+    <div class="row">
+
+        <div class="col-md-4">
+
+            <div class="container">
+
+                <div id="title">
+
+                    <div class="center">
+
+                        <h2>U WANT PIZZA? FILL THIS IN.</h2>
+
+                    </div>
+
+                </div>
+
+                <br>
+
+                <form id="new-order">
+
+                    <div class="form-group">
+                        <label for="new-number">HOW MANY PIZZAS U WANT:</label>
+                        <input type="number" min="1" class="form-control bfh-number" id="new-number">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="new-toppings">HOW MANY TOPPINGS U WANT: </label>
+                        <input type="number" min="1" class="form-control bfh-number" id="new-toppings">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="new-size">HOW MANY INCHES U WANT: (minimum 6)</label>
+                        <input type="number" min="6" class="form-control bfh-number" id="new-size">
+                    </div>
+
+                    <br>
+
+                    <div class="center">
+
+                        <button type="submit" class="btn btn-default">TELL ME HOW MUCH IT IS</button>
+
+                    </div>
+
+                </form>
+
+                <div id="show-pizza">
+
+                    <h1>YR ORDERS:</h1>
+
+                </div>
+
             </div>
 
-            <div class="form-group">
-                <label for="new-toppings">HOW MANY TOPPINGS U WANT:</label>
-                <input type="number" min="1" class="form-control" id="new-toppings">
-            </div>
+        </div>
 
-            <div class="form-group">
-                <label for="new-size">HOW MANY INCHES U WANT:</label>
-                <input type="number" min="6" class="form-control" id="new-size">
-            </div>
+    </div>
 
-            <button type="submit" class="btn">HOW MUCH IT IS</button>
+    <div class="row">
 
-        </form>
-
-        <div id="show-pizza">
-
-            <h1>YOUR ORDER:</h1>
+        <div class="col-md-4">
 
         </div>
 
