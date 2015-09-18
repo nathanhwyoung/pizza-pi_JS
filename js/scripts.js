@@ -7,7 +7,7 @@ function PizzaOrder(numberOfPizzas, numberOfToppings, pizzaSize) {
 
 // LIST PIZZA METHOD
 PizzaOrder.prototype.listPizza = function() {
-    return "Pizzas: " + this.numberOfPizzas + ", Toppings: " + this.numberOfToppings + ", Size: " + this.pizzaSize;
+    return "Pizzas: " + this.numberOfPizzas + ", Toppings: " + this.numberOfToppings + ", Size: " + this.pizzaSize + " inches";
 }
 
 // CALCULATE PIZZA PRICE METHOD
@@ -29,7 +29,6 @@ function resetFields() {
     $("input#new-number").val("");
     $("input#new-toppings").val("");
     $("input#new-size").val("");
-    $(".removable").remove();
 }
 
 // JQUERY
@@ -47,7 +46,7 @@ $(document).ready(function() {
         resetFields();
 
         $("#show-pizza").append(
-            "<p>" + newPizza.listPizza() + "</p>" +
+            "<p><h2><i>" + newPizza.listPizza() + "</i></h2></p>" +
             "<p> $ " + newPizza.calculatePrice() + "</p>" +
             "<p> BTC " + newPizza.calculateBitCoinPrice() + "<i> (Bit-Coin)</i></p>").show("slow");
     });
