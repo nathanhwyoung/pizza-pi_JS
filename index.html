@@ -10,47 +10,44 @@
 </head>
 
 <body>
+
     <div class="container">
-        <h1>ORDER PIZZA PI HERE</h1>
-        <div class="row">
-            <div class="col-md-6">
-                <h2>FILL IN THIS STUFF IF YOU WANT PIZZA</h2>
-                <form id="new-pizza-pi">
 
-                    <div class="form-group">
-                        <label for="new-number">HOW MANY PIZZAS U WANT:</label>
-                        <input type="number" name="new-number">
-                    </div>
+        <div id="title">
 
-                    <div class="form-group">
-                        <label for="new-toppings">HOW MANY TOPPINGS U WANT:</label>
-                        <input type="number" name="new-toppings">
-                    </div>
+            <h2>U WANT PIZZA? FILL THIS IN.</h2>
 
-                    <div class="form-group">
-                        <label for="new-size">HOW MANY INCHES U WANT:</label>
-                        <input type="number" name="new-size">
-                    </div>
+        </div>
 
-                    <button type="submit" class="btn">DISPLAY</button>
+        <form id="new-order">
 
-                </form>
-
-                <h2>YR ORDER:</h2>
-                <ul id="movie">
-
-                </ul>
-
-                <div class="col-md-6">
-                    <div id="show-contact">
-                        <h2></h2>
-
-                    </div>
-                </div>
+            <div class="form-group">
+                <label for="new-number">HOW MANY PIZZAS U WANT:</label>
+                <input type="number" min="1" class="form-control" id="new-number">
             </div>
+
+            <div class="form-group">
+                <label for="new-toppings">HOW MANY TOPPINGS U WANT:</label>
+                <input type="number" min="1" class="form-control" id="new-toppings">
+            </div>
+
+            <div class="form-group">
+                <label for="new-size">HOW MANY INCHES U WANT:</label>
+                <input type="number" min="6" class="form-control" id="new-size">
+            </div>
+
+            <button type="submit" class="btn">HOW MUCH IT IS</button>
+
+        </form>
+
+        <div id="show-pizza">
+
+            <h1>YOUR ORDER:</h1>
+
         </div>
 
     </div>
+
 </body>
 
 </html>

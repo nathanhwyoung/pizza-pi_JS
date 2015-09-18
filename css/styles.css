@@ -1,12 +1,3 @@
-#show-contact {
+#show-pizza {
     display: none;
-}
-
-.contact {
-    cursor: pointer;
-    color: #0088cc;
-}
-
-.contact:hover {
-    text-decoration: underline;
 }

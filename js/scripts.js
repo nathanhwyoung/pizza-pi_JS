@@ -20,7 +20,7 @@ PizzaOrder.prototype.calculatePrice = function() {
 PizzaOrder.prototype.calculateBitCoinPrice = function() {
     var calcPrice = (this.numberOfPizzas * this.numberOfToppings * this.pizzaSize * Math.PI)/10;
     var roundPrice = Math.ceil(calcPrice);
-    var bitPrice = roundPrice * 233.40;
+    var bitPrice = roundPrice/233.40;
     return bitPrice;
 }
 
@@ -35,36 +35,20 @@ function resetFields() {
 // JQUERY
 $(document).ready(function() {
 
-    $("form#new-ticket").submit(function(event) {
+    // SUBMIT EVENT
+    $("form#new-order").submit(function(event) {
         event.preventDefault();
 
-        var movieCode = $("#new-pizza-pi").val();
-        var timeCode = $("#new-movie-time").val();
-        var ageCode = $("#new-age-bracket").val();
-
-        var movieArrayObject = {
-            danceswithwolves : "Dances With Wolves",
-        };
-
-        inputtedMovieName = movieArrayObject[movieCode];
-
-        var timeArrayObject = {
-            time1 : "1:30 pm",
-        };
-
-        inputtedMovieTime = timeArrayObject[timeCode];
-
-        var ageArrayObject = {
-            child : "Child",
-        };
-
-        inputtedAgeBracket = ageArrayObject[ageCode];
-
-        var newTicket = new Ticket(inputtedMovieName, inputtedMovieTime, inputtedAgeBracket);
-
-        $("ul#movie").append("<li>" + newTicket.movieTicket() + "</li>");
+        var inputtedNumber = $("input#new-number").val();
+        var inputtedToppings = $("input#new-toppings").val();
+        var inputtedSize = $("input#new-size").val();
+        var newPizza = new PizzaOrder(inputtedNumber, inputtedToppings, inputtedSize)
 
         resetFields();
 
+        $("#show-pizza").append(
+            "<p>" + newPizza.listPizza() + "</p>" +
+            "<p> $ " + newPizza.calculatePrice() + "</p>" +
+            "<p> BTC " + newPizza.calculateBitCoinPrice() + "<i> (Bit-Coin)</i></p>").show();
     });
 });
