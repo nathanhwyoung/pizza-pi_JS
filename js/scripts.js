@@ -10,6 +10,20 @@ PizzaOrder.prototype.listPizza = function() {
     return "Pizzas: " + this.numberOfPizzas + ", Toppings: " + this.numberOfToppings + ", Size: " + this.pizzaSize;
 }
 
+// CALCULATE PIZZA PRICE METHOD
+PizzaOrder.prototype.calculatePrice = function() {
+    var calcPrice = (this.numberOfPizzas * this.numberOfToppings * this.pizzaSize * Math.PI)/10;
+    return Math.ceil(calcPrice);
+}
+
+// CALCULATE BITCOIN PIZZA PRICE METHOD
+PizzaOrder.prototype.calculateBitCoinPrice = function() {
+    var calcPrice = (this.numberOfPizzas * this.numberOfToppings * this.pizzaSize * Math.PI)/10;
+    var roundPrice = Math.ceil(calcPrice);
+    var bitPrice = roundPrice * 233.40;
+    return bitPrice;
+}
+
 // RESET FIELDS METHOD
 function resetFields() {
     $("input#new-number").val("");
@@ -18,14 +32,15 @@ function resetFields() {
     $(".removable").remove();
 }
 
+// JQUERY
 $(document).ready(function() {
 
     $("form#new-ticket").submit(function(event) {
         event.preventDefault();
 
-        var movieCode = $("#new-pizza-pi option:selected").val();
-        var timeCode = $("#new-movie-time option:selected").val();
-        var ageCode = $("#new-age-bracket option:selected").val();
+        var movieCode = $("#new-pizza-pi").val();
+        var timeCode = $("#new-movie-time").val();
+        var ageCode = $("#new-age-bracket").val();
 
         var movieArrayObject = {
             danceswithwolves : "Dances With Wolves",
