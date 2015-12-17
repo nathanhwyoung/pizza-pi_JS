@@ -10,47 +10,39 @@
 
 <body>
 
-                <div id="title">
+    <div class="main">
 
-                    <h1><i><b>WELCOME TO PIZZA PI.</b></i></h1>
+        <div id="title">
+            <h1><i><b>WELCOME TO PIZZA PI.</b></i></h1>
+            <hr>
+            <h2>U WANT PIZZA? FILL THIS IN.</h2>
+        </div>
 
-                    <hr>
+        <br>
 
-                    <h2>U WANT PIZZA? FILL THIS IN.</h2>
+        <form id="new-order" >
+            <div>
+                <label for="new-number">HOW MANY PIZZAS U WANT:</label>
+                <input type="number" min="1" id="new-number">
+            </div>
+            <div>
+                <label for="new-toppings">HOW MANY TOPPINGS U WANT: </label>
+                <input type="number" min="1" id="new-toppings">
+            </div>
+            <div>
+                <label for="new-size">HOW MANY INCHES U WANT: (minimum 6)</label>
+                <input type="number" min="6"id="new-size">
+            </div>
+            <br>
+            <button type="submit">TELL ME HOW MUCH IT IS</button>
+        </form>
 
-                </div>
+        <div id="show-pizza">
+            <h1>YR ORDERS:</h1>
+        </div>
 
-                <br>
+    </div>
 
-                <form id="new-order" >
-
-                    <div class="form-group">
-                        <label for="new-number">HOW MANY PIZZAS U WANT:</label>
-                        <input type="number" min="1" id="new-number">
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="new-toppings">HOW MANY TOPPINGS U WANT: </label>
-                        <input type="number" min="1" id="new-toppings">
-                    </div>
-
-                    <div>
-                        <label for="new-size">HOW MANY INCHES U WANT: (minimum 6)</label>
-                        <input type="number" min="6"id="new-size">
-                    </div>
-
-                    <br>
-
-                    <button type="submit">TELL ME HOW MUCH IT IS</button>
-
-                </form>
-
-                <div id="show-pizza">
-
-                    <h1>YR ORDERS:</h1>
-
-                </div>
 </body>
 
 </html>
