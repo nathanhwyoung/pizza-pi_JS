@@ -1,7 +1,12 @@
 #show-pizza {
     display: none;
 }
- /*.center {
-    margin: auto;
-    width: 100%;
-}*/
+
+h1 {
+    font-style:italic;
+    text-shadow: 5px 8px 10px pink;
+}
+
+.middle {
+    background-color: grey;
+}
