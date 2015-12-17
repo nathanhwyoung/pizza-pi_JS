@@ -7,10 +7,10 @@ h1 {
     text-shadow: 5px 8px 10px pink;
 }
 
-.middle {
-    background-color: grey;
-}
-
 .main {
+    /*background-color: lightgrey;*/
     text-align: center;
+    margin:auto;
+    width:35%;
+    border-radius: 10px;
 }
